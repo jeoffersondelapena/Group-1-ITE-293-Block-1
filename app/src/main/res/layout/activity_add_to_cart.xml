@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".AddToCart">
 
     <TextView
         android:id="@+id/subTotal"
@@ -23,24 +24,23 @@
         app:layout_constraintVertical_bias="0.944" />
 
     <TextView
-        android:id="@+id/subAmount"
+        android:id="@+id/sub_amount"
         android:layout_width="102dp"
         android:layout_height="24dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="Amount"
         android:textAlignment="textStart"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_PlaceOrder"
-        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.96" />
 
     <TextView
-        android:id="@+id/coTitle2"
+        android:id="@+id/coTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -65,9 +65,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_checkout"
+        android:id="@+id/checkout"
         android:layout_width="131dp"
         android:layout_height="48dp"
+        android:backgroundTint="#4C4B4B"
         android:text="Checkout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,6 +86,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.624" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

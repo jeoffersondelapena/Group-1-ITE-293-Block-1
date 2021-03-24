@@ -1,6 +1,9 @@
 package com.example.onlineshapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +27,22 @@ public class ProductDetails extends AppCompatActivity {
         prod_img.setImageResource(prodImage);
         prod_name.setText(prodName);
         prod_price.setText(Double.toString(prodPrice));
+
+        Button gotoCheckout = (Button) findViewById(R.id.buy_now);
+        gotoCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProductDetails.this, Checkout.class));
+            }
+        });
+
+        Button gotoMycart = (Button) findViewById(R.id.my_cart);
+        gotoMycart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProductDetails.this, AddToCart.class));
+            }
+        });
 
     }
 }

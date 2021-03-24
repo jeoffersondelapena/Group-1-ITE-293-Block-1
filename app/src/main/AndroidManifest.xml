@@ -9,23 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineShapp">
+        <activity android:name=".Checkout"></activity>
+        <activity android:name=".AddToCart" />
         <activity android:name=".bottoms" />
         <activity android:name=".tops" />
         <activity android:name=".bags" />
         <activity android:name=".shoes" />
         <activity android:name=".ProductDetails" />
-        <activity android:name=".SplashActivity"
-            android:theme="@style/SplashStyle"
+        <activity
+            android:name=".SplashActivity"
             android:noHistory="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

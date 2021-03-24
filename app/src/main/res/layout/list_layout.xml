@@ -57,21 +57,6 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btn_addtocart"
-                android:layout_width="151dp"
-                android:layout_height="43dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="236dp"
-                android:layout_marginTop="88dp"
-                android:layout_marginEnd="6dp"
-                android:layout_marginBottom="0dp"
-                android:text="Add to Cart"
-                app:iconPadding="2sp" />
-
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

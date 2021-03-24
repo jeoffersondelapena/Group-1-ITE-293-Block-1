@@ -39,7 +39,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.prodName.setText(product.getProdName());
         holder.prodDetails.setText(product.getProdDetails());
         holder.prodPrice.setText(String.valueOf(product.getProdPrice()));
-
         holder.prodImg.setImageDrawable(mCtx.getResources().getDrawable(product.getProdImg()));
 
         card.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +69,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             prodPrice = itemView.findViewById(R.id.prodPrice);
             prodImg = itemView.findViewById(R.id.prodImg);
             card=itemView.findViewById(R.id.card);
+
         }
     }
 }

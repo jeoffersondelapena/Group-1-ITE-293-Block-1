@@ -13,7 +13,6 @@ public class bags extends AppCompatActivity {
 
 
     RecyclerView recyclerView;
-
     ProductAdapter adapter;
     List<Product> productList;
 

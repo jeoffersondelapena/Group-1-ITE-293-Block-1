@@ -12,16 +12,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button shoes = findViewById(R.id.shoes);
-        shoes.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, shoes.class)));
+        shoes.setOnClickListener(view -> goToActivity(shoes.class));
 
         Button bags = findViewById(R.id.bags);
-        bags.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, bags.class)));
+        bags.setOnClickListener(view -> goToActivity(shoes.class));
 
         Button tops = findViewById(R.id.tops);
-        tops.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, tops.class)));
+        tops.setOnClickListener(view -> goToActivity(shoes.class));
 
         Button bottoms = findViewById(R.id.bottoms);
-        bottoms.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, bottoms.class)));
+        bottoms.setOnClickListener(view -> goToActivity(shoes.class));
+    }
+
+    private void goToActivity(Class _class) {
+        NavigationManager.goToActivity(MainActivity.this, _class, false);
     }
 
 }

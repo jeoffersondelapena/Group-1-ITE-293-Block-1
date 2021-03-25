@@ -8,9 +8,10 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class bags extends AppCompatActivity {
+public class Shoes extends AppCompatActivity {
 
     RecyclerView recyclerView;
+
     ProductAdapter adapter;
 
     FloatingActionButton fabCart;
@@ -18,19 +19,19 @@ public class bags extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bags);
+        setContentView(R.layout.activity_shoes);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycleView);
+        recyclerView = (RecyclerView)findViewById(R.id.recycleView);
         recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new ProductAdapter(this, SuperGlobals.bagsList);
+        adapter = new ProductAdapter(this, SuperGlobals.shoesList);
 
         recyclerView.setAdapter(adapter);
 
         fabCart = findViewById(R.id.fabCart);
-        fabCart.setOnClickListener(v -> NavigationManager.goToActivity(bags.this, AddToCart.class, false));
+        fabCart.setOnClickListener(v -> NavigationManager.goToActivity(Shoes.this, AddToCart.class, false));
     }
 
 }

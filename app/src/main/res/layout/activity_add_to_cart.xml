@@ -68,7 +68,7 @@
         android:id="@+id/checkout"
         android:layout_width="131dp"
         android:layout_height="48dp"
-        android:backgroundTint="#4C4B4B"
+        android:backgroundTint="@color/icon_blue"
         android:text="Checkout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -9,9 +9,9 @@
     </item>
 
     <item
-        android:drawable="@drawable/head"
-        android:width="400dp"
-        android:height="100dp"
+        android:drawable="@drawable/logo"
+        android:width="150dp"
+        android:height="120dp"
         android:gravity="center">
     </item>
 </layer-list>

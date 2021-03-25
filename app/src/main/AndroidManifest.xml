@@ -12,10 +12,10 @@
         <activity android:name=".OrderPlaced"></activity>
         <activity android:name=".Checkout" />
         <activity android:name=".AddToCart" />
-        <activity android:name=".bottoms" />
-        <activity android:name=".tops" />
-        <activity android:name=".bags" />
-        <activity android:name=".shoes" />
+        <activity android:name=".Bottoms" />
+        <activity android:name=".Tops" />
+        <activity android:name=".Bags" />
+        <activity android:name=".Shoes" />
         <activity android:name=".ProductDetails" />
         <activity
             android:name=".SplashActivity"

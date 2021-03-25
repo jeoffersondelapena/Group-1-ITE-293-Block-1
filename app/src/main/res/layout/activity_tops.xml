@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tops">
+    tools:context=".Tops">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
@@ -27,6 +27,7 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabCart"
+        android:backgroundTint="@color/icon_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
@@ -34,5 +35,7 @@
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+        app:srcCompat="@drawable/ic_baseline_shopping_cart_24"
+        app:tint="@android:color/white"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.279">
+        app:layout_constraintVertical_bias="0.352">
 
         <EditText
             android:id="@+id/textView6"
@@ -51,44 +51,44 @@
             android:id="@+id/radioGroupGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-          
+
             <RadioButton
                 android:id="@+id/radioButtonCod"
-                android:layoutDirection="rtl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="textStart"
                 android:layout_gravity="start"
+                android:checked="true"
+                android:layoutDirection="rtl"
                 android:text="Cash on Delivery"
-                android:checked="true"/>
+                android:textAlignment="textStart" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#c0c0c0" />
 
             <RadioButton
                 android:id="@+id/radioButtonCard"
-                android:layoutDirection="rtl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="textStart"
                 android:layout_gravity="start"
-                android:text="Credit/Debit Card"/>
+                android:layoutDirection="rtl"
+                android:text="Credit/Debit Card"
+                android:textAlignment="textStart" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#c0c0c0"/>
+                android:background="#c0c0c0" />
 
             <RadioButton
                 android:id="@+id/radioButtonEWallet"
-                android:layoutDirection="rtl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="textStart"
                 android:layout_gravity="start"
-                android:text="Payment Center/ e-Wallet"/>
+                android:layoutDirection="rtl"
+                android:text="Payment Center/ e-Wallet"
+                android:textAlignment="textStart" />
 
         </RadioGroup>
 
@@ -132,7 +132,7 @@
         android:layout_width="137dp"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="#4C4B4B"
+        android:backgroundTint="@color/icon_blue"
         android:text="Place Order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -169,7 +169,7 @@
         android:id="@+id/coTitle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:text="Checkout Details"
         android:textSize="20sp"
         android:textStyle="bold"

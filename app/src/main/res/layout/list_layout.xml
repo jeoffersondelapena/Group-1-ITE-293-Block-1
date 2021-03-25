@@ -59,6 +59,7 @@
 
             <Button
                 android:id="@+id/btnAddRemoveCart"
+                android:backgroundTint="@color/icon_blue"
                 android:layout_toEndOf="@id/prodImg"
                 android:layout_below="@id/prodPrice"
                 android:layout_width="wrap_content"
@@ -66,6 +67,5 @@
                 android:text="Add to Cart"/>
 
         </RelativeLayout>
-
     </androidx.cardview.widget.CardView>
 </LinearLayout>

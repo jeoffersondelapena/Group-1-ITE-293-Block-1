@@ -11,16 +11,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button shoes = findViewById(R.id.shoes);
-        shoes.setOnClickListener(view -> goToActivity(shoes.class));
+        shoes.setOnClickListener(view -> goToActivity(Shoes.class));
 
         Button bags = findViewById(R.id.bags);
-        bags.setOnClickListener(view -> goToActivity(bags.class));
+        bags.setOnClickListener(view -> goToActivity(Bags.class));
 
         Button tops = findViewById(R.id.tops);
-        tops.setOnClickListener(view -> goToActivity(tops.class));
+        tops.setOnClickListener(view -> goToActivity(Tops.class));
 
         Button bottoms = findViewById(R.id.bottoms);
-        bottoms.setOnClickListener(view -> goToActivity(bottoms.class));
+        bottoms.setOnClickListener(view -> goToActivity(Bottoms.class));
     }
 
     private void goToActivity(Class _class) {

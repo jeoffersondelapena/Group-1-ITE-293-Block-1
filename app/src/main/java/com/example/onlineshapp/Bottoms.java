@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class shoes extends AppCompatActivity {
+public class Bottoms extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
@@ -19,19 +19,19 @@ public class shoes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shoes);
+        setContentView(R.layout.activity_bottoms);
 
-        recyclerView = (RecyclerView)findViewById(R.id.recycleView);
+        recyclerView=(RecyclerView)findViewById(R.id.recycleView);
         recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new ProductAdapter(this, SuperGlobals.shoesList);
+        adapter = new ProductAdapter(this, SuperGlobals.bottomsList);
 
         recyclerView.setAdapter(adapter);
 
         fabCart = findViewById(R.id.fabCart);
-        fabCart.setOnClickListener(v -> NavigationManager.goToActivity(shoes.this, AddToCart.class, false));
+        fabCart.setOnClickListener(v -> NavigationManager.goToActivity(Bottoms.this, AddToCart.class, false));
     }
 
 }

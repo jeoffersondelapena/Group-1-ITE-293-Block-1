@@ -6,11 +6,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class shoes extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
     ProductAdapter adapter;
+
+    FloatingActionButton fabCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,9 @@ public class shoes extends AppCompatActivity {
         adapter = new ProductAdapter(this, SuperGlobals.shoesList);
 
         recyclerView.setAdapter(adapter);
+
+        fabCart = findViewById(R.id.fabCart);
+        fabCart.setOnClickListener(v -> NavigationManager.goToActivity(shoes.this, AddToCart.class, false));
     }
 
 }

@@ -14,9 +14,13 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
+
+    private TextView lblAmount;
 
     private Context mCtx;
     CardView card;
@@ -25,6 +29,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public ProductAdapter(Context mCtx, List<Product> productList) {
         this.mCtx = mCtx;
         this.productList = productList;
+    }
+
+    public ProductAdapter(Context mCtx, List<Product> productList, TextView lblAmount) {
+        this.mCtx = mCtx;
+        this.productList = productList;
+        this.lblAmount = lblAmount;
     }
 
     @NonNull
@@ -51,6 +61,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.btnAddRemoveCart.setOnClickListener(v -> {
             product.setAddedToCart(!product.isAddedToCart());
             updateBtnAddRemoveCart(product, holder);
+
+            if (lblAmount != null) {
+                double amount = CartItemsManager.retrieveProductsTotal(CartItemsManager.retrieveCartItems());
+                lblAmount.setText(String.valueOf(amount));
+            }
         });
 
         card.setOnClickListener(view -> {
@@ -88,6 +103,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         } else {
             holder.btnAddRemoveCart.setText("Remove from Cart");
         }
+    }
+
+    public interface OnCartItemsChangedListener {
+        void onCartItemsChanged();
     }
 
 }

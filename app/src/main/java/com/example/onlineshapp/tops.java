@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,8 @@ public class tops extends AppCompatActivity {
     RecyclerView recyclerView;
 
     ProductAdapter adapter;
+
+    FloatingActionButton fabCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,9 @@ public class tops extends AppCompatActivity {
         adapter = new ProductAdapter(this, SuperGlobals.topsList);
 
         recyclerView.setAdapter(adapter);
+
+        fabCart = findViewById(R.id.fabCart);
+        fabCart.setOnClickListener(v -> NavigationManager.goToActivity(tops.this, AddToCart.class, false));
     }
 
 }

@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -36,24 +38,27 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
-        Product product=productList.get(position);
+        Product product = productList.get(position);
 
         holder.prodName.setText(product.getProdName());
         holder.prodDetails.setText(product.getProdDetails());
         holder.prodPrice.setText(String.valueOf(product.getProdPrice()));
 
-        holder.prodImg.setImageDrawable(mCtx.getResources().getDrawable(product.getProdImg()));
+        holder.prodImg.setImageResource(product.getProdImg());
 
-        card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //code
-                Intent details = new Intent(view.getContext(), ProductDetails.class);
-                details.putExtra("_prodImage", product.getProdImg());
-                details.putExtra("_prodName", product.getProdName());
-                details.putExtra("_prodPrice", product.getProdPrice());
-                view.getContext().startActivity(details);
-            }
+        updateBtnAddRemoveCart(product, holder);
+        
+        holder.btnAddRemoveCart.setOnClickListener(v -> {
+            product.setAddedToCart(!product.isAddedToCart());
+            updateBtnAddRemoveCart(product, holder);
+        });
+
+        card.setOnClickListener(view -> {
+            Intent details = new Intent(view.getContext(), ProductDetails.class);
+            details.putExtra("_prodImage", product.getProdImg());
+            details.putExtra("_prodName", product.getProdName());
+            details.putExtra("_prodPrice", product.getProdPrice());
+            view.getContext().startActivity(details);
         });
     }
 
@@ -65,13 +70,23 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     class ProductViewHolder extends RecyclerView.ViewHolder{
         TextView prodName, prodDetails, prodPrice;
         ImageView prodImg;
+        Button btnAddRemoveCart;
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
             prodName = itemView.findViewById(R.id.prodName);
             prodDetails = itemView.findViewById(R.id.prodDetails);
             prodPrice = itemView.findViewById(R.id.prodPrice);
             prodImg = itemView.findViewById(R.id.prodImg);
+            btnAddRemoveCart = itemView.findViewById(R.id.btnAddRemoveCart);
             card=itemView.findViewById(R.id.card);
+        }
+    }
+
+    private void updateBtnAddRemoveCart(Product product, ProductViewHolder holder) {
+        if (!product.isAddedToCart()) {
+            holder.btnAddRemoveCart.setText("Add to Cart");
+        } else {
+            holder.btnAddRemoveCart.setText("Remove from Cart");
         }
     }
 

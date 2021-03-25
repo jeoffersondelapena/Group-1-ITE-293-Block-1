@@ -1,6 +1,7 @@
 package com.example.onlineshapp;
 
 public class Product {
+
     private int id;
     private String prodName;
     private String prodDetails;
@@ -34,5 +35,6 @@ public class Product {
     public int getProdImg() {
         return prodImg;
     }
+
 }
 

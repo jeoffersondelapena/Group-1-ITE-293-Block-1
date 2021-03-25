@@ -14,7 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder>{
+public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
+
     private Context mCtx;
     CardView card;
     private List<Product>productList;
@@ -23,6 +24,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         this.mCtx = mCtx;
         this.productList = productList;
     }
+
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -72,4 +74,5 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             card=itemView.findViewById(R.id.card);
         }
     }
+
 }

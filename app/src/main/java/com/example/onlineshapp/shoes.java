@@ -11,7 +11,6 @@ import java.util.List;
 
 public class shoes extends AppCompatActivity {
 
-
     RecyclerView recyclerView;
 
     ProductAdapter adapter;
@@ -74,13 +73,9 @@ public class shoes extends AppCompatActivity {
                         1500,
                         R.drawable.s6));
 
-
-
-
-
         adapter = new ProductAdapter(this, productList);
-
 
         recyclerView.setAdapter(adapter);
     }
+
 }

@@ -6,6 +6,8 @@ import java.util.List;
 
 public class SuperGlobals {
 
+    public static double totalPrice;
+
     public static List<Product> shoesList = new ArrayList<>(Arrays.asList(
             new Product(
                     1,

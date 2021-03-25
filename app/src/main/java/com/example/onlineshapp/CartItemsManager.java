@@ -36,4 +36,17 @@ public class CartItemsManager {
         return total;
     }
 
+    public static void deleteAllCartItems() {
+        deleteAllCartItemsFrom(SuperGlobals.shoesList);
+        deleteAllCartItemsFrom(SuperGlobals.bagsList);
+        deleteAllCartItemsFrom(SuperGlobals.topsList);
+        deleteAllCartItemsFrom(SuperGlobals.bottomsList);
+    }
+
+    private static void deleteAllCartItemsFrom(List<Product> productList) {
+        for (Product product: productList) {
+            product.setAddedToCart(false);
+        }
+    }
+
 }

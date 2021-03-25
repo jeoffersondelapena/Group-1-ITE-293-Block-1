@@ -65,6 +65,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             if (lblAmount != null) {
                 double amount = CartItemsManager.retrieveProductsTotal(CartItemsManager.retrieveCartItems());
                 lblAmount.setText(String.valueOf(amount));
+                SuperGlobals.totalPrice = amount;
             }
         });
 

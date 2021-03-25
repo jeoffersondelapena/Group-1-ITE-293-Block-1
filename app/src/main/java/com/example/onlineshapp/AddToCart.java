@@ -39,6 +39,7 @@ public class AddToCart extends AppCompatActivity {
 
         double amount = CartItemsManager.retrieveProductsTotal(CartItemsManager.retrieveCartItems());
         lblAmount.setText(String.valueOf(amount));
+        SuperGlobals.totalPrice = amount;
     }
 
 }

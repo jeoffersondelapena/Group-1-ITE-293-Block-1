@@ -1,6 +1,5 @@
 package com.example.onlineshapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -10,7 +9,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class Checkout extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Checkout extends AppCompatActivity {
 
     TextView lblAmount;
     Button btnPlaceOrder;

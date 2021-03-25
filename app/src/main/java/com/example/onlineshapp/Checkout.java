@@ -1,5 +1,6 @@
 package com.example.onlineshapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class Checkout extends AppCompatActivity {
+public class Checkout extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     TextView lblAmount;
     Button btnPlaceOrder;
@@ -19,7 +20,7 @@ public class Checkout extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
-
+      
         lblAmount = findViewById(R.id.lblAmount);
         btnPlaceOrder = findViewById(R.id.btnPlaceOrder);
         progressBar = findViewById(R.id.progressBar);

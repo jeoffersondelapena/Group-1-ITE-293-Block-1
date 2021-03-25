@@ -51,7 +51,7 @@
             android:id="@+id/radioGroupGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
+          
             <RadioButton
                 android:id="@+id/radioButtonCod"
                 android:layoutDirection="rtl"

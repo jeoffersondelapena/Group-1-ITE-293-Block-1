@@ -28,21 +28,11 @@ public class ProductDetails extends AppCompatActivity {
         prod_name.setText(prodName);
         prod_price.setText(Double.toString(prodPrice));
 
-        Button gotoCheckout = (Button) findViewById(R.id.buy_now);
-        gotoCheckout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ProductDetails.this, Checkout.class));
-            }
-        });
+//        Button gotoCheckout = (Button) findViewById(R.id.buy_now);
+//        gotoCheckout.setOnClickListener((View.OnClickListener) v -> startActivity(new Intent(ProductDetails.this, Checkout.class)));
 
-        Button gotoMycart = (Button) findViewById(R.id.my_cart);
-        gotoMycart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ProductDetails.this, AddToCart.class));
-            }
-        });
-
+//        Button gotoMycart = (Button) findViewById(R.id.my_cart);
+//        gotoMycart.setOnClickListener((View.OnClickListener) v -> startActivity(new Intent(ProductDetails.this, AddToCart.class)));
     }
+
 }

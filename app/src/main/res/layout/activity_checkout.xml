@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="411dp"
-        android:layout_height="187dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,73 +19,80 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.279">
 
-        <TextView
+        <EditText
             android:id="@+id/textView6"
-            android:layout_width="118dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Delivery Address"
-            android:textStyle="bold" />
+            android:hint="Delivery Address" />
 
-        <TextView
+        <EditText
             android:id="@+id/full_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Full Name" />
+            android:hint="Full Name" />
 
-        <TextView
+        <EditText
             android:id="@+id/home_address"
             android:layout_width="match_parent"
             android:layout_height="63dp"
             android:layout_marginBottom="10dp"
-            android:text="Home Address" />
+            android:hint="Home Address" />
 
-        <TextView
+        <EditText
             android:id="@+id/contact_num"
             android:layout_width="388dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Contact Number" />
+            android:hint="Contact Number" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+          
+            <RadioButton
+                android:id="@+id/radioButtonCod"
+                android:layoutDirection="rtl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:text="Cash on Delivery"
+                android:checked="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonCard"
+                android:layoutDirection="rtl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:text="Credit/Debit Card"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonEWallet"
+                android:layoutDirection="rtl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:text="Payment Center/ e-Wallet"/>
+
+        </RadioGroup>
 
     </LinearLayout>
-
-    <Spinner
-        android:id="@+id/payment_method"
-        android:layout_width="174dp"
-        android:layout_height="28dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.883"
-        android:entries="@array/Payment_Method"/>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="150dp"
-        android:layout_height="28dp"
-        android:text="Payment Method: "
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.883" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="414dp"
-        android:layout_height="267dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
 
     <TextView
         android:id="@+id/totalPayTitle"
@@ -105,7 +112,7 @@
         app:layout_constraintVertical_bias="0.944" />
 
     <TextView
-        android:id="@+id/total_price"
+        android:id="@+id/lblAmount"
         android:layout_width="102dp"
         android:layout_height="24dp"
         android:layout_marginTop="24dp"
@@ -121,7 +128,22 @@
         app:layout_constraintVertical_bias="0.96" />
 
     <Button
-        android:id="@+id/place_order"
+        android:id="@+id/btnPlaceOrder"
+        android:layout_width="137dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#4C4B4B"
+        android:text="Place Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
         android:layout_width="137dp"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"

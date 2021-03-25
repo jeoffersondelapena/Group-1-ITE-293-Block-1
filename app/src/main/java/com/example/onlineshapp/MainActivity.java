@@ -1,7 +1,5 @@
 package com.example.onlineshapp;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,36 +10,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button shoes = (Button) findViewById(R.id.shoes);
-        shoes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, shoes.class));
-            }
-        });
+        Button shoes = findViewById(R.id.shoes);
+        shoes.setOnClickListener(view -> goToActivity(shoes.class));
 
-        Button bags = (Button) findViewById(R.id.bags);
-        bags.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, bags.class));
-            }
-        });
+        Button bags = findViewById(R.id.bags);
+        bags.setOnClickListener(view -> goToActivity(bags.class));
 
-        Button tops = (Button) findViewById(R.id.tops);
-        tops.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, tops.class));
-            }
-        });
+        Button tops = findViewById(R.id.tops);
+        tops.setOnClickListener(view -> goToActivity(tops.class));
 
-        Button bottoms = (Button) findViewById(R.id.bottoms);
-        bottoms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, bottoms.class));
-            }
-        });
+        Button bottoms = findViewById(R.id.bottoms);
+        bottoms.setOnClickListener(view -> goToActivity(bottoms.class));
     }
+
+    private void goToActivity(Class _class) {
+        NavigationManager.goToActivity(MainActivity.this, _class, false);
+    }
+
 }

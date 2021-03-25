@@ -11,7 +11,6 @@ import java.util.List;
 
 public class bags extends AppCompatActivity {
 
-
     RecyclerView recyclerView;
     ProductAdapter adapter;
     List<Product> productList;
@@ -78,4 +77,5 @@ public class bags extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
     }
+
 }

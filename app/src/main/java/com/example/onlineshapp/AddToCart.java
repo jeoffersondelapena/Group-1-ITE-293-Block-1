@@ -15,11 +15,7 @@ public class AddToCart extends AppCompatActivity {
         setContentView(R.layout.activity_add_to_cart);
 
         Button checkOut = (Button) findViewById(R.id.checkout);
-        checkOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(AddToCart.this, Checkout.class));
-            }
-        });
+        checkOut.setOnClickListener(v -> startActivity(new Intent(AddToCart.this, Checkout.class)));
     }
+
 }

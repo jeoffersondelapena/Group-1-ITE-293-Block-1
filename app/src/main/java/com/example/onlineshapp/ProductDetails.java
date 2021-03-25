@@ -43,6 +43,6 @@ public class ProductDetails extends AppCompatActivity {
                 startActivity(new Intent(ProductDetails.this, AddToCart.class));
             }
         });
-
     }
+
 }

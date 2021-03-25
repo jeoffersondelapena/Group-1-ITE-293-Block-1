@@ -11,7 +11,6 @@ import java.util.List;
 
 public class tops extends AppCompatActivity {
 
-
     RecyclerView recyclerView;
 
     ProductAdapter adapter;
@@ -76,7 +75,7 @@ public class tops extends AppCompatActivity {
 
         adapter = new ProductAdapter(this, productList);
 
-
         recyclerView.setAdapter(adapter);
     }
+
 }

@@ -72,44 +72,4 @@
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/buy_now"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
-        android:backgroundTint="#4C4B4B"
-        android:text="Buy Now"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.94"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991" />
-
-    <Button
-        android:id="@+id/addtocart"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
-        android:backgroundTint="#4C4B4B"
-        android:text="Add Cart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991" />
-
-    <Button
-        android:id="@+id/my_cart"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
-        android:backgroundTint="#4C4B4B"
-        android:text="My Cart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

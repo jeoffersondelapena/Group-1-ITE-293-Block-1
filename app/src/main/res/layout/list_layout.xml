@@ -57,6 +57,14 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/btnAddRemoveCart"
+                android:layout_toEndOf="@id/prodImg"
+                android:layout_below="@id/prodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to Cart"/>
+
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

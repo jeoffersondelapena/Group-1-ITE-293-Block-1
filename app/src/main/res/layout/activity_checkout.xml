@@ -22,30 +22,50 @@
         <EditText
             android:id="@+id/textView6"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginBottom="10dp"
+            android:drawablePadding="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_loc_icon"
             android:hint="Delivery Address" />
 
         <EditText
             android:id="@+id/full_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/custom_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:drawablePadding="12dp"
+            android:drawableStart="@drawable/custom_person_icon"
             android:hint="Full Name" />
 
         <EditText
             android:id="@+id/home_address"
             android:layout_width="match_parent"
-            android:layout_height="63dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
             android:layout_marginBottom="10dp"
+            android:drawablePadding="12dp"
+            android:drawableStart="@drawable/custom_home_icon"
             android:hint="Home Address" />
 
         <EditText
             android:id="@+id/contact_num"
             android:layout_width="388dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_input"
             android:layout_marginBottom="10dp"
-            android:hint="Contact Number" />
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:drawablePadding="12dp"
+            android:hint="Contact Number"
+            android:drawableStart="@drawable/custom_call_icon"/>
 
         <RadioGroup
             android:id="@+id/radioGroupGender"
